@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes swipe-down {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0.4;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1.0;
+    }
+}
+
+@keyframes swipe-up {
+    0% {
+        transform: translateX(0%);
+        opacity: 1.0;
+    }
+    100% {
+        transform: translateX(100%);
+        opacity: 0.0;
+    }
+}
+
+.page-trans-enter-active {
+    animation: swipe-down 1s ease-out infinite;
+}
+
+.page-trans-leave-active {
+    animation: swipe-up 400ms ease-out;
+}
